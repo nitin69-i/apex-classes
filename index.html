@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="hi" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apex Coaching Classes - Learn Better. Aim Higher.</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brandNavy: '#0B1E36',
+                        brandDarkBg: '#081424',
+                        brandOrange: '#FF5722',
+                        brandOrangeHover: '#E64A19',
+                        brandCardBg: '#102A4A',
+                        brandGold: '#FFD700'
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-brandDarkBg text-white font-sans antialiased selection:bg-brandOrange selection:text-white">
+
+    <!-- Top Announcement Ticker -->
+    <div class="bg-brandOrange text-white text-xs md:text-sm py-2 px-4 font-semibold overflow-hidden flex items-center shadow-md">
+        <span class="bg-brandNavy text-white px-3 py-1 rounded-md text-xs font-bold uppercase mr-3 whitespace-nowrap shadow">ANNOUNCEMENT</span>
+        <marquee behavior="scroll" direction="left" class="w-full">
+            🚀 🔥 Admission Open for New Session 2026-27! Classes 1 to 10 (All Subjects) & 11-12 (PCM / PCB). Book your 2-Day FREE Demo Class Today! Call / WhatsApp: +91 9661660425
+        </marquee>
+    </div>
+
+    <!-- Header / Navbar -->
+    <nav class="sticky top-0 z-40 bg-brandNavy/95 backdrop-blur-md border-b border-slate-800 shadow-xl">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-20">
+            <!-- Logo Section -->
+            <a href="#" class="flex items-center space-x-3 group">
+                <img src="assets/apex-logo.png" alt="Apex Classes Logo" class="h-14 w-auto rounded-full border-2 border-brandOrange shadow-lg group-hover:scale-105 transition duration-200">
+                <div>
+                    <span class="text-2xl font-black tracking-wider text-white block leading-none">APEX</span>
+                    <span class="text-xs font-bold tracking-widest text-brandOrange block mt-1 uppercase">CLASSES</span>
+                </div>
+            </a>
+
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex items-center space-x-8 font-medium text-slate-300">
+                <a href="#home" class="hover:text-brandOrange transition">Home</a>
+                <a href="#about" class="hover:text-brandOrange transition">Why Us</a>
+                <a href="#courses" class="hover:text-brandOrange transition">Courses</a>
+                <a href="#parents" class="hover:text-brandOrange transition">Parent's Zone</a>
+                <a href="#testimonials" class="hover:text-brandOrange transition">Reviews</a>
+                <a href="#contact" class="hover:text-brandOrange transition">Contact</a>
+            </div>
+
+            <!-- CTA Buttons -->
+            <div class="hidden md:flex items-center space-x-4">
+                <a href="tel:+919661660425" class="text-sm font-semibold text-slate-300 hover:text-white flex items-center gap-2 bg-brandCardBg px-4 py-2 rounded-lg border border-slate-700">
+                    <i class="fa-solid fa-phone text-brandOrange"></i> +91 9661660425
+                </a>
+                <button onclick="openDemoModal()" class="bg-brandOrange hover:bg-brandOrangeHover text-white px-5 py-2.5 rounded-lg font-bold shadow-lg shadow-brandOrange/30 hover:scale-105 transition duration-200 animate-pulse">
+                    ⚡ Book Free Demo
+                </button>
+            </div>
+
+            <!-- Mobile Hamburger Button -->
+            <button id="mobileMenuBtn" class="md:hidden text-2xl text-slate-300 hover:text-white">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Drawer -->
+        <div id="mobileMenu" class="hidden md:hidden bg-brandNavy border-b border-slate-800 px-6 py-4 space-y-4">
+            <a href="#home" class="block text-slate-300 hover:text-brandOrange">Home</a>
+            <a href="#about" class="block text-slate-300 hover:text-brandOrange">Why Us</a>
+            <a href="#courses" class="block text-slate-300 hover:text-brandOrange">Courses</a>
+            <a href="#parents" class="block text-slate-300 hover:text-brandOrange">Parent's Zone</a>
+            <a href="#testimonials" class="block text-slate-300 hover:text-brandOrange">Reviews</a>
+            <a href="#contact" class="block text-slate-300 hover:text-brandOrange">Contact</a>
+            <button onclick="openDemoModal()" class="w-full bg-brandOrange text-white py-3 rounded-lg font-bold shadow-md">
+                Book Free Demo Today
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative py-20 lg:py-32 overflow-hidden bg-gradient-to-b from-brandNavy via-brandDarkBg to-brandDarkBg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center max-w-4xl mx-auto">
+                <div class="inline-flex items-center gap-2 bg-brandOrange/10 border border-brandOrange/30 text-brandOrange px-4 py-1.5 rounded-full text-xs md:text-sm font-bold uppercase tracking-wider mb-6">
+                    <i class="fa-solid fa-award text-amber-400"></i> Bilaspur's Most Trusted Coaching Institute
+                </div>
+                <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight mb-6 leading-tight">
+                    RIGHT GUIDANCE<br>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-brandOrange via-amber-400 to-amber-200">STRONG FOUNDATION</span><br>
+                    BRIGHT FUTURE!
+                </h1>
+                <p class="text-slate-300 text-lg sm:text-xl max-w-2xl mx-auto mb-10 leading-relaxed">
+                    Learn Better. Aim Higher. Give your child the academic advantage with expert faculty, personalized attention, and regular performance reporting for parents.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
+                    <button onclick="openDemoModal()" class="w-full sm:w-auto bg-brandOrange hover:bg-brandOrangeHover text-white px-8 py-4 rounded-xl font-extrabold text-lg shadow-xl shadow-brandOrange/30 transform hover:-translate-y-1 transition">
+                        🎓 BOOK 2-DAY FREE DEMO CLASS
+                    </button>
+                    <a href="https://wa.me/919661660425" target="_blank" class="w-full sm:w-auto bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-xl font-bold text-lg shadow-lg flex items-center justify-center gap-3 transition">
+                        <i class="fa-brands fa-whatsapp text-2xl"></i> Talk To Academic Counselor
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 🌟 PARENT'S TRUST & HIGHLIGHTS SECTION -->
+    <section id="parents" class="py-16 bg-brandNavy/60 border-y border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <span class="text-brandOrange font-extrabold uppercase tracking-widest text-xs">WHY PARENTS PREFER APEX</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-1">Why Choose Apex Classes For Your Child?</h2>
+                <div class="w-20 h-1 bg-brandOrange mx-auto mt-3 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+                <div class="bg-brandCardBg p-6 rounded-2xl border border-slate-700/60 text-center hover:border-brandOrange transition">
+                    <div class="w-14 h-14 bg-brandOrange/20 text-brandOrange rounded-full flex items-center justify-center text-2xl mx-auto mb-4">
+                        <i class="fa-solid fa-chart-line"></i>
+                    </div>
+                    <h3 class="font-bold text-lg text-white mb-2">Weekly Performance Reports</h3>
+                    <p class="text-slate-400 text-sm">Parents receive weekly updates on attendance, test marks, and academic growth.</p>
+                </div>
+                <div class="bg-brandCardBg p-6 rounded-2xl border border-slate-700/60 text-center hover:border-brandOrange transition">
+                    <div class="w-14 h-14 bg-amber-500/20 text-amber-400 rounded-full flex items-center justify-center text-2xl mx-auto mb-4">
+                        <i class="fa-solid fa-user-check"></i>
+                    </div>
+                    <h3 class="font-bold text-lg text-white mb-2">Small Batch Sizes</h3>
+                    <p class="text-slate-400 text-sm">Limited students per batch ensuring 1-on-1 personal attention to every student.</p>
+                </div>
+                <div class="bg-brandCardBg p-6 rounded-2xl border border-slate-700/60 text-center hover:border-brandOrange transition">
+                    <div class="w-14 h-14 bg-emerald-500/20 text-emerald-400 rounded-full flex items-center justify-center text-2xl mx-auto mb-4">
+                        <i class="fa-solid fa-book-reader"></i>
+                    </div>
+                    <h3 class="font-bold text-lg text-white mb-2">NCERT & CBSE Mastery</h3>
+                    <p class="text-slate-400 text-sm">Deep, exam-oriented study focusing on core concepts and scoring patterns.</p>
+                </div>
+                <div class="bg-brandCardBg p-6 rounded-2xl border border-slate-700/60 text-center hover:border-brandOrange transition">
+                    <div class="w-14 h-14 bg-blue-500/20 text-blue-400 rounded-full flex items-center justify-center text-2xl mx-auto mb-4">
+                        <i class="fa-solid fa-headset"></i>
+                    </div>
+                    <h3 class="font-bold text-lg text-white mb-2">Dedicated Doubt Clearing</h3>
+                    <p class="text-slate-400 text-sm">Special extra classes for revision and clearing every single student doubt.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Courses Section -->
+    <section id="courses" class="py-20 bg-brandNavy">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-brandOrange font-extrabold uppercase tracking-widest text-xs">EXCELLENCE IN EDUCATION</span>
+                <h2 class="text-3xl sm:text-5xl font-extrabold text-white mt-1 mb-4">OUR ACADEMIC PROGRAMS</h2>
+                <div class="w-24 h-1.5 bg-brandOrange mx-auto rounded-full"></div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                <!-- Card 1 -->
+                <div class="bg-brandCardBg border border-slate-700 rounded-2xl p-8 shadow-2xl relative overflow-hidden group hover:border-brandOrange transition duration-300">
+                    <div class="absolute top-0 right-0 bg-brandOrange text-white text-xs font-black uppercase px-4 py-1.5 rounded-bl-xl">
+                        FOUNDATION
+                    </div>
+                    <div class="w-16 h-16 bg-brandOrange/20 text-brandOrange rounded-2xl flex items-center justify-center text-3xl mb-6">
+                        <i class="fa-solid fa-book-open"></i>
+                    </div>
+                    <h3 class="text-3xl font-black mb-2 text-white">CLASSES 1 - 10</h3>
+                    <p class="text-brandOrange font-bold mb-4 text-lg">ALL SUBJECTS (CBSE / State Board)</p>
+                    <p class="text-slate-400 mb-6 text-sm">
+                        Comprehensive foundation building with NCERT clarity, regular practice sheets, and concept-building tests for high scores.
+                    </p>
+                    <button onclick="openDemoModal('Classes 1-10')" class="w-full bg-slate-800 hover:bg-brandOrange text-white font-bold py-3.5 rounded-xl border border-slate-700 transition">
+                        Enroll For Free 2-Day Demo
+                    </button>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-brandCardBg border border-slate-700 rounded-2xl p-8 shadow-2xl relative overflow-hidden group hover:border-brandOrange transition duration-300">
+                    <div class="absolute top-0 right-0 bg-brandOrange text-white text-xs font-black uppercase px-4 py-1.5 rounded-bl-xl">
+                        SENIOR SECONDARY
+                    </div>
+                    <div class="w-16 h-16 bg-amber-500/20 text-amber-400 rounded-2xl flex items-center justify-center text-3xl mb-6">
+                        <i class="fa-solid fa-atom"></i>
+                    </div>
+                    <h3 class="text-3xl font-black mb-2 text-white">CLASSES 11 - 12</h3>
+                    <p class="text-brandOrange font-bold mb-4 text-lg">PCM • PCB</p>
+                    <p class="text-slate-400 mb-6 text-sm">
+                        Rigorous preparation for Physics, Chemistry, Maths & Biology with exam-oriented methodologies and numerical practice.
+                    </p>
+                    <button onclick="openDemoModal('Classes 11-12')" class="w-full bg-slate-800 hover:bg-brandOrange text-white font-bold py-3.5 rounded-xl border border-slate-700 transition">
+                        Enroll For Free 2-Day Demo
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What We Provide Section -->
+    <section id="features" class="py-20 bg-brandDarkBg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-brandOrange font-extrabold uppercase tracking-widest text-sm">OUR ADVANTAGE</span>
+                <h2 class="text-3xl sm:text-5xl font-extrabold text-white mt-2 mb-4">WHAT WE PROVIDE</h2>
+                <div class="w-24 h-1.5 bg-brandOrange mx-auto rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-brandCardBg/80 p-6 rounded-xl border border-slate-800 flex items-start gap-4 hover:border-brandOrange/50 transition">
+                    <div class="w-12 h-12 rounded-lg bg-brandOrange/20 text-brandOrange flex items-center justify-center text-xl shrink-0"><i class="fa-solid fa-users"></i></div>
+                    <div><h4 class="font-bold text-lg text-white">REGULAR CLASSES</h4><p class="text-slate-400 text-sm mt-1">Structured syllabus coverage with interactive teaching.</p></div>
+                </div>
+                <div class="bg-brandCardBg/80 p-6 rounded-xl border border-slate-800 flex items-start gap-4 hover:border-brandOrange/50 transition">
+                    <div class="w-12 h-12 rounded-lg bg-brandOrange/20 text-brandOrange flex items-center justify-center text-xl shrink-0"><i class="fa-solid fa-clipboard-check"></i></div>
+                    <div><h4 class="font-bold text-lg text-white">WEEKLY TESTS</h4><p class="text-slate-400 text-sm mt-1">Regular evaluation to track student progress.</p></div>
+                </div>
+                <div class="bg-brandCardBg/80 p-6 rounded-xl border border-slate-800 flex items-start gap-4 hover:border-brandOrange/50 transition">
+                    <div class="w-12 h-12 rounded-lg bg-brandOrange/20 text-brandOrange flex items-center justify-center text-xl shrink-0"><i class="fa-solid fa-file-pen"></i></div>
+                    <div><h4 class="font-bold text-lg text-white">CHAPTER-WISE TESTS</h4><p class="text-slate-400 text-sm mt-1">Master every single chapter before moving forward.</p></div>
+                </div>
+                <div class="bg-brandCardBg/80 p-6 rounded-xl border border-slate-800 flex items-start gap-4 hover:border-brandOrange/50 transition">
+                    <div class="w-12 h-12 rounded-lg bg-brandOrange/20 text-brandOrange flex items-center justify-center text-xl shrink-0"><i class="fa-solid fa-comments text-xl"></i></div>
+                    <div><h4 class="font-bold text-lg text-white">DOUBT SOLVING</h4><p class="text-slate-400 text-sm mt-1">Dedicated sessions to solve every individual doubt.</p></div>
+                </div>
+                <div class="bg-brandCardBg/80 p-6 rounded-xl border border-slate-800 flex items-start gap-4 hover:border-brandOrange/50 transition">
+                    <div class="w-12 h-12 rounded-lg bg-brandOrange/20 text-brandOrange flex items-center justify-center text-xl shrink-0"><i class="fa-solid fa-bullseye"></i></div>
+                    <div><h4 class="font-bold text-lg text-white">EXAM-ORIENTED PREP</h4><p class="text-slate-400 text-sm mt-1">Focus on exam pattern, important questions & strategy.</p></div>
+                </div>
+                <div class="bg-brandCardBg/80 p-6 rounded-xl border border-slate-800 flex items-start gap-4 hover:border-brandOrange/50 transition">
+                    <div class="w-12 h-12 rounded-lg bg-brandOrange/20 text-brandOrange flex items-center justify-center text-xl shrink-0"><i class="fa-solid fa-graduation-cap"></i></div>
+                    <div><h4 class="font-bold text-lg text-white">NCERT-FOCUSED STUDY</h4><p class="text-slate-400 text-sm mt-1">Deep mastery over complete NCERT textbooks.</p></div>
+                </div>
+                <div class="bg-brandCardBg/80 p-6 rounded-xl border border-slate-800 flex items-start gap-4 hover:border-brandOrange/50 transition">
+                    <div class="w-12 h-12 rounded-lg bg-brandOrange/20 text-brandOrange flex items-center justify-center text-xl shrink-0"><i class="fa-solid fa-file-lines"></i></div>
+                    <div><h4 class="font-bold text-lg text-white">WORKSHEETS / PRACTICE</h4><p class="text-slate-400 text-sm mt-1">Daily practice sheets for extra retention.</p></div>
+                </div>
+                <div class="bg-brandCardBg/80 p-6 rounded-xl border border-slate-800 flex items-start gap-4 hover:border-brandOrange/50 transition">
+                    <div class="w-12 h-12 rounded-lg bg-brandOrange/20 text-brandOrange flex items-center justify-center text-xl shrink-0"><i class="fa-solid fa-book"></i></div>
+                    <div><h4 class="font-bold text-lg text-white">STUDY MATERIAL</h4><p class="text-slate-400 text-sm mt-1">High-quality, easy to digest notes & formula sheets.</p></div>
+                </div>
+                <div class="bg-brandCardBg/80 p-6 rounded-xl border border-slate-800 flex items-start gap-4 hover:border-brandOrange/50 transition">
+                    <div class="w-12 h-12 rounded-lg bg-brandOrange/20 text-brandOrange flex items-center justify-center text-xl shrink-0"><i class="fa-solid fa-lightbulb"></i></div>
+                    <div><h4 class="font-bold text-lg text-white">QUIZ & ACTIVITIES</h4><p class="text-slate-400 text-sm mt-1">Interactive learning quizzes for high engagement.</p></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Address & Contact Section -->
+    <section id="contact" class="py-20 bg-brandNavy border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <span class="text-brandOrange font-bold uppercase tracking-wider text-sm">VISIT US</span>
+                    <h2 class="text-3xl sm:text-4xl font-black text-white mt-2 mb-6">LOCATION & CONTACT DETAILS</h2>
+                    <div class="space-y-6">
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 bg-brandOrange/20 text-brandOrange rounded-lg flex items-center justify-center text-xl shrink-0">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white text-lg">ADDRESS</h4>
+                                <p class="text-slate-300">Deendayal Colony, (Yadav Gali 2)<br>Mangla, Bilaspur (C.G.)</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 bg-brandOrange/20 text-brandOrange rounded-lg flex items-center justify-center text-xl shrink-0">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white text-lg">CALL / WHATSAPP</h4>
+                                <p class="text-slate-300 font-bold text-lg text-brandOrange">+91 9661660425</p>
+                            </div>
+                        </div>
+
+                        <div class="p-6 bg-brandCardBg rounded-2xl border border-slate-700 mt-6">
+                            <h4 class="font-bold text-white mb-2">YOUR GOALS. OUR MISSION.</h4>
+                            <p class="text-slate-400 text-sm">Experience our teaching before you decide. Book your 2-Day FREE demo class today!</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact / Quick Inquiry Box -->
+                <div class="bg-brandCardBg p-8 rounded-2xl border border-slate-700 shadow-2xl">
+                    <h3 class="text-2xl font-black text-white mb-6 flex items-center gap-2">
+                        <i class="fa-solid fa-paper-plane text-brandOrange"></i> QUICK INQUIRY FOR PARENTS
+                    </h3>
+                    <form id="contactForm" onsubmit="handleFormSubmit(event)" class="space-y-4">
+                        <div>
+                            <label class="block text-sm font-semibold text-slate-300 mb-1">Student Full Name</label>
+                            <input type="text" id="quickName" required class="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-brandOrange" placeholder="Enter student name">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-slate-300 mb-1">Parent / Student Mobile Number</label>
+                            <input type="tel" id="quickPhone" required class="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-brandOrange" placeholder="10-digit mobile number">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-slate-300 mb-1">Class Applying For</label>
+                            <select id="quickClass" class="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-brandOrange">
+                                <option>Class 1 to 10</option>
+                                <option>Class 11 (PCM)</option>
+                                <option>Class 11 (PCB)</option>
+                                <option>Class 12 (PCM)</option>
+                                <option>Class 12 (PCB)</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="w-full bg-brandOrange hover:bg-brandOrangeHover text-white font-bold py-3.5 rounded-lg shadow-lg transition">
+                            Send Inquiry Via WhatsApp
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-brandDarkBg py-8 border-t border-slate-800 text-center text-slate-500 text-sm">
+        <p>© 2026 Apex Coaching Classes, Bilaspur. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/919661660425" target="_blank" class="fixed bottom-6 right-6 z-50 bg-emerald-500 text-white w-14 h-14 rounded-full flex items-center justify-center text-3xl shadow-2xl hover:scale-110 transition">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <!-- 🌟 ADVANCED BOOK FREE DEMO MODAL POPUP (WITH DETAILED FIELDS) -->
+    <div id="demoModal" class="fixed inset-0 bg-black/85 backdrop-blur-md z-50 hidden flex items-center justify-center p-4 overflow-y-auto">
+        <div class="bg-brandNavy border border-slate-700 rounded-2xl max-w-lg w-full p-6 sm:p-8 shadow-2xl relative my-8 animate-fade-in">
+            <button onclick="closeDemoModal()" class="absolute top-4 right-4 text-slate-400 hover:text-white text-2xl">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="text-center mb-6">
+                <span class="bg-brandOrange/20 text-brandOrange px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">🌟 2-Day Free Trial</span>
+                <h3 class="text-2xl sm:text-3xl font-black text-white mt-2">BOOK FREE DEMO CLASS</h3>
+                <p class="text-slate-400 text-xs sm:text-sm mt-1">Fill out the details below & secure your seat today!</p>
+            </div>
+            
+            <form onsubmit="handleDemoSubmit(event)" class="space-y-4">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-xs font-bold text-slate-300 mb-1">STUDENT NAME *</label>
+                        <input type="text" id="modalStudentName" required class="w-full bg-slate-900 border border-slate-700 rounded-lg px-3.5 py-2.5 text-white text-sm focus:border-brandOrange outline-none" placeholder="Student name">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold text-slate-300 mb-1">PARENT / GUARDIAN NAME *</label>
+                        <input type="text" id="modalParentName" required class="w-full bg-slate-900 border border-slate-700 rounded-lg px-3.5 py-2.5 text-white text-sm focus:border-brandOrange outline-none" placeholder="Parent name">
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-xs font-bold text-slate-300 mb-1">WHATSAPP NUMBER *</label>
+                        <input type="tel" id="modalPhone" required class="w-full bg-slate-900 border border-slate-700 rounded-lg px-3.5 py-2.5 text-white text-sm focus:border-brandOrange outline-none" placeholder="10-digit number">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold text-slate-300 mb-1">SCHOOL NAME</label>
+                        <input type="text" id="modalSchool" class="w-full bg-slate-900 border border-slate-700 rounded-lg px-3.5 py-2.5 text-white text-sm focus:border-brandOrange outline-none" placeholder="e.g. DAV / DPS / St. Xavier">
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-xs font-bold text-slate-300 mb-1">SELECT CLASS *</label>
+                        <select id="modalClass" class="w-full bg-slate-900 border border-slate-700 rounded-lg px-3.5 py-2.5 text-white text-sm focus:border-brandOrange outline-none">
+                            <option value="Class 1 to 5">Class 1 to 5 (All Subjects)</option>
+                            <option value="Class 6 to 8">Class 6 to 8 (All Subjects)</option>
+                            <option value="Class 9">Class 9 (All Subjects)</option>
+                            <option value="Class 10">Class 10 (Board Exam Special)</option>
+                            <option value="Class 11 PCM">Class 11 (PCM)</option>
+                            <option value="Class 11 PCB">Class 11 (PCB)</option>
+                            <option value="Class 12 PCM">Class 12 (PCM - Boards/Competitive)</option>
+                            <option value="Class 12 PCB">Class 12 (PCB - Boards/Competitive)</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold text-slate-300 mb-1">PREFERRED BATCH TIMING</label>
+                        <select id="modalTiming" class="w-full bg-slate-900 border border-slate-700 rounded-lg px-3.5 py-2.5 text-white text-sm focus:border-brandOrange outline-none">
+                            <option value="Morning Batch">Morning Batch (7:00 AM - 10:00 AM)</option>
+                            <option value="Evening Batch">Evening Batch (4:00 PM - 7:30 PM)</option>
+                            <option value="Any Timing Works">Any Timing Works</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-xs font-bold text-slate-300 mb-1">MEDIUM OF INSTRUCTION</label>
+                    <div class="flex items-center gap-6 text-sm pt-1">
+                        <label class="flex items-center gap-2 cursor-pointer">
+                            <input type="radio" name="medium" value="English Medium" checked class="accent-brandOrange"> English Medium
+                        </label>
+                        <label class="flex items-center gap-2 cursor-pointer">
+                            <input type="radio" name="medium" value="Hindi Medium" class="accent-brandOrange"> Hindi Medium
+                        </label>
+                    </div>
+                </div>
+
+                <button type="submit" class="w-full bg-brandOrange hover:bg-brandOrangeHover text-white font-extrabold py-3.5 rounded-xl shadow-lg text-base transition duration-200 mt-2">
+                    🚀 CONFIRM & SUBMIT DEMO BOOKING
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- 🏆 SUCCESS THANK YOU MODAL POPUP -->
+    <div id="thankYouModal" class="fixed inset-0 bg-black/90 backdrop-blur-md z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-brandNavy border border-emerald-500/50 rounded-3xl max-w-md w-full p-8 text-center shadow-2xl relative animate-fade-in">
+            <div class="w-20 h-20 bg-emerald-500/20 text-emerald-400 rounded-full flex items-center justify-center text-4xl mx-auto mb-5 shadow-lg border border-emerald-500/30">
+                <i class="fa-solid fa-circle-check"></i>
+            </div>
+            <h3 class="text-2xl font-black text-white mb-2">THANK YOU FOR CHOOSING APEX CLASSES!</h3>
+            <p class="text-slate-300 text-sm mb-6 leading-relaxed">
+                आपकी 2-Day Free Demo Class की बुकिंग रिक्वेस्ट सफलता से दर्ज कर ली गई है! हमारी टीम आपसे जल्द ही संपर्क करेगी।
+            </p>
+            <div class="p-4 bg-slate-900 rounded-xl border border-slate-800 text-xs text-slate-400 mb-6">
+                💡 <span class="text-amber-400 font-bold">Note:</span> आपके व्हाट्सएप पर डिटेल्स का मैसेज ओपन हो रहा है, कृपया 'Send' बटन दबाकर हमें सूचित करें!
+            </div>
+            <button onclick="closeThankYouModal()" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3.5 rounded-xl shadow-lg transition">
+                OK, GREAT!
+            </button>
+        </div>
+    </div>
+
+    <!-- JS Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>
